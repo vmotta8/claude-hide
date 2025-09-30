@@ -2,6 +2,10 @@
 
 A Chrome extension to hide project chats from Claude's sidebar.
 
+## Demo
+
+![Demo](demo.gif)
+
 ## Features
 
 - Automatically hides chats that belong to projects
