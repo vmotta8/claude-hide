@@ -44,6 +44,11 @@ async function fetchProjectChats() {
 
 // Hides/shows project chats based on configuration
 function hideProjectChats() {
+  if (!chrome?.storage?.sync) {
+    console.error('[Claude Hide Chats] chrome.storage is not available');
+    return;
+  }
+
   chrome.storage.sync.get(['hideProjectChats'], function(result) {
     const isEnabled = result.hideProjectChats !== false;
     const chatLinks = document.querySelectorAll('a[href^="/chat/"]');
@@ -109,6 +114,8 @@ if (document.readyState === 'loading') {
 }
 
 // Reapplies when settings change
-chrome.storage.onChanged.addListener((changes) => {
-  if (changes.hideProjectChats) hideProjectChats();
-});
+if (chrome?.storage?.onChanged) {
+  chrome.storage.onChanged.addListener((changes) => {
+    if (changes.hideProjectChats) hideProjectChats();
+  });
+}

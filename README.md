@@ -29,3 +29,7 @@ Click the extension icon in your toolbar to toggle hiding project chats. When en
 ## How it works
 
 The extension detects which chats belong to projects by checking the `project_uuid` field from Claude's API and hides them from the sidebar.
+
+## Troubleshooting
+
+If the extension doesn't work after installation, try reloading the Claude page (Ctrl/Cmd + R).
