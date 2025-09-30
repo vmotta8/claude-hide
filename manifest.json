@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Claude - Hide Project Chats",
+  "name": "Claude Hide Chats",
   "version": "1.0",
   "description": "Hide chats that belong to projects in Claude's sidebar",
   "permissions": [

@@ -38,7 +38,7 @@ async function fetchProjectChats() {
     // Hide the chats
     setTimeout(hideProjectChats, 100);
   } catch (e) {
-    console.error('[Claude Hide] Error:', e);
+    console.error('[Claude Hide Chats] Error:', e);
   }
 }
 
